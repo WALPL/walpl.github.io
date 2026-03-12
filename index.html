@@ -3,9 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agentforce Test</title>
+    <title>AF Test</title>
 </head>
 <body>
     <h1>Hello world</h1>
 </body>
+
+<script type='text/javascript'>
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+
+			embeddedservice_bootstrap.init(
+				'00DRu00000NYoy1',
+				'Agentforce_Embedded_Deployment_UAT',
+				'https://bullhorn--uat.sandbox.my.site.com/ESWAgentforceEmbeddedDe1772148800651',
+				{
+					scrt2URL: 'https://bullhorn--uat.sandbox.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+</script>
+<script type='text/javascript' src='https://bullhorn--uat.sandbox.my.site.com/ESWAgentforceEmbeddedDe1772148800651/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+
 </html>
